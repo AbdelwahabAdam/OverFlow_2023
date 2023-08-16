@@ -1,6 +1,12 @@
 # OverFlow_2023
 This repo will contain all the progress for the software team.
 
+---
+# Install Git
+- Got to https://git-scm.com/download/win
+- choose 64-bit Git for Windows Setup.
+- follow instruction
+---
 
 # Creating a New Branch, Directory, and Making a Pull Request
 
