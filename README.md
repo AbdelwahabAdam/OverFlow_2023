@@ -8,13 +8,19 @@ This repo will contain all the progress for the software team.
 - follow instruction
 ---
 
-# Creating a New Branch, Directory, and Making a Pull Request
-
-## Clone the repository to your local machine:
+## Clone the `MAIN` repository to your local machine:
 ```
 git clone [<repository_url>](https://github.com/AbdelwahabAdam/OverFlow_2023.git)
 ```
 ---------
+## Clone single branch to your local machine:
+```
+git clone --single-branch --branch data_base_task https://github.com/AbdelwahabAdam/OverFlow_2023.git
+```
+change data_base_task to the desired branch name
+
+----
+
 ## Change into the repository directory:
 ```
 cd <repository_directory>
@@ -25,31 +31,22 @@ cd <repository_directory>
 ```
 git checkout -b <new_branch_name>
 ```
+#### OR
+from git interface 
 
 ---------
-
-### Create a new directory within the branch:
-```
-mkdir <new_directory_name>
-```
-
+---------
 ---------
 
-### Navigate into the new directory:
-```
-cd <new_directory_name>
-```
 
----------
-
-- Create the necessary files or make the desired changes within the directory.
+### After Creating the necessary files or make the desired changes within the branch.
 
 ---------
 
 ### Add the changes to the staging area:
 
 ```
-git add .
+git add file_name
 ```
 
 ---------
@@ -57,7 +54,7 @@ git add .
 ## Commit the changes:
 
 ```
-git commit -m "Add <new_directory_name> and its contents"
+git commit -m "yourName:taskName: an extra comment"
 ```
 
 ---------
@@ -66,7 +63,11 @@ git commit -m "Add <new_directory_name> and its contents"
 ```
 git push origin <new_branch_name>
 ```
+OR
 
+```
+git push 
+```
 ---------
 
 - Open the repository in your browser and navigate to the branch you just pushed.
@@ -79,9 +80,10 @@ git push origin <new_branch_name>
 
 - Give your pull request a meaningful title and description.
 
+- add me (Abdelwahab) as reviwer 
+
 - Click on the "Create Pull Request" button again to submit the pull request.
 
-- Wait for the repository maintainers to review and merge your pull request.
+- Wait for the repository maintainers (me) to review and merge your pull request.
 
---
-an edit 2
+---- 
