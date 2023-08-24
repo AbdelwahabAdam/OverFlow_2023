@@ -34,5 +34,4 @@
 - we can check how many class a certain teacher give
 - we can check what is the salery a certain teacher will get
 
-
 </details>
