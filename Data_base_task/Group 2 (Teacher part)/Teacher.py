@@ -24,12 +24,12 @@ class Teacher:
         for teacher in self.teachers:
             print(f" - Name: {teacher['name']} , Age: {teacher['age']} , Hourly Rate: {teacher['hour_rate']} , English Teacher: {teacher['english_teacher']} , Math Teacher: {teacher['math_teacher']}\n")
 
-    # search method
+    # Search method
     def search_teacher(self, name=None, english_teacher=None, math_teacher=None):
         results = []
 
         for teacher in self.teachers:
-            if (name is None or name == teacher['name']) and \
+            if  (name is None or name == teacher['name']) and \
                 (english_teacher is None or english_teacher == teacher['english_teacher']) and \
                 (math_teacher is None or math_teacher == teacher['math_teacher']):
                     results.append(teacher)
@@ -103,7 +103,7 @@ if __name__ == "__main__":
     print("\n before bonus:")
     tms.list_teachers()
 
-    tms.give_bonus(teachers_to_update[0],2.0)
+    tms.give_bonus(teachers_to_update[0], 2.0)
     print("\n after bonus")
     tms.list_teachers()
 
