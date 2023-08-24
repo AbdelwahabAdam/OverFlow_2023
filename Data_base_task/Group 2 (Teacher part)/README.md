@@ -35,3 +35,32 @@
 - we can check what is the salery a certain teacher will get
 
 </details>
+
+# Using
+
+Create a virtual environment:
+```bash
+python -m venv venv
+```
+
+Activate the virtual environment:
+
+On Windows:
+```bash
+venv\Scripts\activate
+```
+
+On macOS and Linux:
+```zsh
+source venv/bin/activate
+```
+Install the required libraries:
+```bash
+pip install -r requirements.txt
+```
+
+Run the main script:
+```bash
+python main.py
+```
+Follow the on-screen instructions to interact with the Teacher Management System.
