@@ -1,3 +1,7 @@
+<details>
+<summary>Click to toggle task details</summary>
+
+
 ### Problem Statement: Write a program to build a simple Teachers Management System using Python which can perform the following operations:
 
 - Add
@@ -29,3 +33,6 @@
 - we can give a all english or math teachers a bounce
 - we can check how many class a certain teacher give
 - we can check what is the salery a certain teacher will get
+
+
+</details>
