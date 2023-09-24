@@ -44,20 +44,23 @@ class Database:
                                 file.write(line)
                         else:
                             file.write(line)
+        print(print(f"{self.type} data was deleted successfully"))
 
-    def update_data(self, value1, value2):
-        old_line = ''
-        with open(f"{self.type}.txt", 'r') as file:
-            for line in file:
-                if value1 in line and value2 in line:
-                    old_line = line
+### HOW TO USE
+# from student import Student
 
-        with open(f"{self.type}.txt", 'r') as file:
-            lines = file.readlines()
+## Add data
+# std = Student(name= "hopa", age= 45 , height= 5.0 , 
+#             class_name= 'A1', english_score= 0.0,
+#             math_score= 150.2, attendance_score= 4.2, 
+#             gpa = 4.4) 
+# db = Database(ob=std, type='student')
+# db.add_data()
 
-        with open(f"{self.type}.txt", 'w') as file:
-            for line in lines:
-                    if old_line not in line:
-                        file.write(line)
-                    else:
-                        file.write(str(self.ob.list_all()))
+## Search data
+# db = Database(ob=Student, type='student')
+# db.search_data(value='45') ## any value from the object attr
+
+## Delete data
+# db = Database(ob=Student, type='student')
+# db.delete_data(value='hopa', flag=1)
