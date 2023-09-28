@@ -1,9 +1,8 @@
 from tkinter import *
-
+import os
 
 window = Tk()
 
-fileN=""
 
 ##############(Window)#######################
 window.title("School Management System")
@@ -18,8 +17,11 @@ def search_data(self, value):
                 if value in line:
                     print(line)
 def fun():
+    if not os.path.exists("std.txt"):
+        with open("std.txt", "w") as f:
+            pass
+
     if selected.get() == 1 :
-        fileN="std.txt"
         file1 = open("std.txt","r")
         for i in file1.readlines():
             print(i)
