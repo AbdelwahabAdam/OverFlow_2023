@@ -1,6 +1,7 @@
 from tkinter import *
 import os
-
+from database import *
+from student import Student
 window = Tk()
 
 
@@ -10,26 +11,41 @@ window.geometry("400x300")
 window.resizable(width=FALSE,height=False)
 
 selected =IntVar()
-##################(FUNCTIONS)#################
-def search_data(self, value):
-        with open(f"{self.type}.txt", 'r') as file:
-            for line in file:
-                if value in line:
-                    print(line)
-def fun():
-    if not os.path.exists("std.txt"):
-        with open("std.txt", "w") as f:
-            pass
+#############################################
 
+
+
+
+##################(FUNCTIONS)#################
+def add():
+    x=entA.get()
+    y=entN.get()
+    std1= Student(name=y,age=x)
+    db = Database(ob=std1, type="student")
+    db.add_data()
+    
+def search():
+    srch=ent.get()
+    sname=Database(ob=srch,type="student")
+    z=sname.search_data(value=srch)
+    list1.insert(END,z)
+
+
+def fun():
     if selected.get() == 1 :
-        file1 = open("std.txt","r")
-        for i in file1.readlines():
-            print(i)
+        type1=Student(name="student: ")
+        x=Database(ob=type1,type="student")
+        x.add_data()
+
+        
     elif selected.get() == 2 :
-        fileN="teach.txt"
+         type1=Student(name="Teacher: ")
+         x=Database(ob=type1,type="teacher")
+         x.add_data()
+#############################################        
        
     
-##############(Radio Button)#####################
+##############(layout)#####################
 r1 = Radiobutton(window,text="student",value=1,variable=selected,command=fun)
 r1.grid(row=6,column=0)
 
@@ -55,9 +71,12 @@ ent.grid(row=11,column=2)
 list1=Listbox(window,height=10)
 list1.grid(row=15,column=2)
 
-saveB=Button(window,text="SAVE")
+saveB=Button(window,text="SAVE",command=add)
 saveB.grid(row=20,column=4)
 
+serB=Button(window,text="SEARCH",command=search)
+serB.grid(row=20,column=2)
+################################################
 
 window.mainloop()
 
