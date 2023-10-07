@@ -2,8 +2,8 @@ import tkinter
 import tkinter.messagebox
 import customtkinter
 
-customtkinter.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
-customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
+customtkinter.set_appearance_mode("dark")  # Modes: "System" (standard), "Dark", "Light"
+customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "green", "dark-blue"
 
 
 class App(customtkinter.CTk):
@@ -114,12 +114,12 @@ class App(customtkinter.CTk):
         # create checkbox and switch frame
         self.checkbox_slider_frame = customtkinter.CTkFrame(self)
         self.checkbox_slider_frame.grid(row=1, column=3, padx=(20, 20), pady=(20, 0), sticky="nsew")
-        self.checkbox_1 = customtkinter.CTkCheckBox(master=self.checkbox_slider_frame)
-        self.checkbox_1.grid(row=1, column=0, pady=(20, 0), padx=20, sticky="n")
-        self.checkbox_2 = customtkinter.CTkCheckBox(master=self.checkbox_slider_frame)
-        self.checkbox_2.grid(row=2, column=0, pady=(20, 0), padx=20, sticky="n")
-        self.checkbox_3 = customtkinter.CTkCheckBox(master=self.checkbox_slider_frame)
-        self.checkbox_3.grid(row=3, column=0, pady=20, padx=20, sticky="n")
+        self.checkbox_1 = customtkinter.CTkCheckBox(master=self.checkbox_slider_frame,text="Task (1)")
+        self.checkbox_1.grid(row=2, column=0, pady=(20, 0), padx=20, sticky="n")
+        self.checkbox_2 = customtkinter.CTkCheckBox(master=self.checkbox_slider_frame,text="Task (2)")
+        self.checkbox_2.grid(row=3, column=0, pady=(20, 0), padx=20, sticky="n")
+        self.checkbox_3 = customtkinter.CTkCheckBox(master=self.checkbox_slider_frame,text="Task (3)")
+        self.checkbox_3.grid(row=4, column=0, pady=20, padx=20, sticky="n")
 
         # set default values
        
